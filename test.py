@@ -28,7 +28,7 @@ direction = "RIGHT"
 change_to = direction
 score = 0
 
-def show_score(choice, color, font, size):
+def show_score(color, font, size):
     score_font = pg.font.SysFont(font, size)
     score_surface = score_font.render("Score : " + str(score), True, color)
     score_rect = score_surface.get_rect()
