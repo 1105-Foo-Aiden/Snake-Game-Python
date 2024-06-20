@@ -3,15 +3,16 @@ import time
 import random
 
 snake_speed = 15
-window_x = 420
+window_x = 760
 window_y = 420
 black = pg.Color(0, 0, 0)
 white = pg.Color(255, 255, 255)
 red = pg.Color(255, 0, 0)
 green = pg.Color(0, 255, 0)
 blue = pg.Color(0, 0, 255)
+
 pg.init()
-pg.display.set_caption("Snake Game?")
+pg.display.set_caption("Snake Game")
 game_window = pg.display.set_mode((window_x, window_y))
 
 fps = pg.time.Clock()
@@ -115,6 +116,6 @@ while True:
         if snake_pos[0] == block[0] and snake_pos[1] == block[1]:
             game_over()
             
-    show_score(1, white, "times new roman", 20)
+    show_score(white, "times new roman", 20)
     pg.display.update()
     fps.tick(snake_speed)
